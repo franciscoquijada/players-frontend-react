@@ -1,0 +1,28 @@
+.player-card {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.top {
+    margin: 20px 0 0 40px;
+    width: 80%;
+}
+
+.right-side {
+    padding-left: 40px;
+}
+
+.image-name-tagline {
+    display: flex;
+    margin-left: 20px;
+}
+
+.image-name-tagline > .player-name {
+    font-size: 22px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.player-info {
+    text-align: center;
+}
+
