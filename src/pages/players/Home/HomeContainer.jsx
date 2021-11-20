@@ -10,22 +10,21 @@ export const HomeContainer = () => {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
+        const fetchPlayersData = () => {
+            const quantityPages = 20;
+            setLoading(true);
+             axios.get(
+                `${process.env.REACT_APP_API_URL}players/?search=${searchPlayers}&page=${currentPage}&limit=${quantityPages}`
+            ).then(response => {
+                setTotalPages(calculateTotalPages(response.data.total, quantityPages));
+                setPlayers(response.data.data);
+                setLoading(false);
+            }).catch(error => {
+                setLoading(false);
+            });
+        };
         fetchPlayersData();
     }, [currentPage, searchPlayers]);
-
-    const fetchPlayersData = async () => {
-        const quantityPages = 20;
-        setLoading(true);
-        await axios.get(
-            `${process.env.REACT_APP_API_URL}players/?search=${searchPlayers}&page=${currentPage}&limit=${quantityPages}`
-        ).then(response => {
-            setTotalPages(calculateTotalPages(response.data.total, quantityPages));
-            setPlayers(response.data.data);
-            setLoading(false);
-        }).catch(error => {
-            setLoading(false);
-        });
-    };
 
     const calculateTotalPages = (total, quantity) => {
         let numberPages = Math.trunc(total / quantity);
