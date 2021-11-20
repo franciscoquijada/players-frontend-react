@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import {PaginationButtons} from '../../components/players/Pagination/Pagination';
-import {Card} from '../../components/players/Card/Card';
-import {SearchInput} from '../../components/players/SearchInput/SearchInput';
-import {Loading} from '../../components/players/Loading/Loading';
+import {PaginationButtons} from '../../../components/players/Pagination/Pagination';
+import {Card} from '../../../components/players/Card/Card';
+import {SearchInput} from '../../../components/players/SearchInput/SearchInput';
+import {Loading} from '../../../components/players/Loading/Loading';
 import './Home.css';
-import {NotContent} from '../../components/players/NotContent/NotContent';
+import {NotContent} from '../../../components/players/NotContent/NotContent';
 
 export const Home = () => {
     const [cards, setCards] = useState([]);
