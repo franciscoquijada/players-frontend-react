@@ -4,8 +4,9 @@ import {PaginationButtons} from '../../../components/players/Pagination/Paginati
 import {Card} from '../../../components/players/Card/Card';
 import {SearchInput} from '../../../components/players/SearchInput/SearchInput';
 import {Loading} from '../../../components/players/Loading/Loading';
-import './Home.css';
 import {NotContent} from '../../../components/players/NotContent/NotContent';
+import './Home.css';
+
 
 export const Home = () => {
     const [cards, setCards] = useState([]);
@@ -38,7 +39,8 @@ export const Home = () => {
     };
 
     const calculateTotalPages = (total, quantity) => {
-        return Math.trunc(total / quantity) <= 0 ? 1 : total;
+        let numberPages = Math.trunc(total / quantity);
+        return numberPages <= 0 ? 1 : numberPages;
     }
 
     const handlePageChange = (e) => {
