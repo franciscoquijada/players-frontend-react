@@ -12,7 +12,7 @@ export const HomeView = ({
                          handlePageChange,
                          totalPages,
                          currentPage,
-                         cards
+                         players
                          }) => {
 
     return (
@@ -34,10 +34,10 @@ export const HomeView = ({
                                     page={currentPage}
                                 />
                             </div>
-                            {cards.length ?
+                            {players.length ?
                                 <div className='player-container'>
                                     {
-                                        cards.map((player) => (
+                                        players.map((player) => (
                                             <Card
                                                 key={player.id}
                                                 player={player}
