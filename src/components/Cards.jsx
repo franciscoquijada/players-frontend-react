@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/Cards.css';
 
 export const Cards = React.forwardRef(({player}, ref) => {
+
     return (
         <div className='player-card' ref={ref}>
             <section className='top'>

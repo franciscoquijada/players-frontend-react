@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/Card.css';
 
 export const CardPlayer = ({player}) => {
+
     return (
         <div className='card'>
             <div className='image-container'>
