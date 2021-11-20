@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {IconButton, InputAdornment, TextField} from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
-import '../styles/Card.css';
+import '../Card/Card.css';
 
 export const SearchInput = ({setSearchPlayers}) => {
     const [searchInput, setSearchInput] = useState('');

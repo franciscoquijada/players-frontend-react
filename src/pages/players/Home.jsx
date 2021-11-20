@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import {PaginationButtons} from './Pagination';
-import {CardPlayer} from './CardPlayer';
-import {SearchInput} from './SearchInput';
-import {Loading} from './Loading';
-import '../styles/Home.css';
-import {NotContent} from './NotContent';
+import {PaginationButtons} from '../../components/players/Pagination/Pagination';
+import {Card} from '../../components/players/Card/Card';
+import {SearchInput} from '../../components/players/SearchInput/SearchInput';
+import {Loading} from '../../components/players/Loading/Loading';
+import './Home.css';
+import {NotContent} from '../../components/players/NotContent/NotContent';
 
 export const Home = () => {
     const [cards, setCards] = useState([]);
@@ -68,7 +68,7 @@ export const Home = () => {
                                 <div className='player-container'>
                                     {
                                         cards.map((player) => (
-                                            <CardPlayer
+                                            <Card
                                                 key={player.id}
                                                 player={player}
                                                 id={player.id}

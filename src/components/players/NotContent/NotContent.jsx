@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/NotContent.css';
+import './NotContent.css';
 
 export const NotContent = () => {
 
