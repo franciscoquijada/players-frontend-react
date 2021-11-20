@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
 
 export const PaginationButtons = ({handlePageChange, total}) => {
     const classes = useStyles();
+
     return (
         <div className={classes.root}>
             <Pagination
