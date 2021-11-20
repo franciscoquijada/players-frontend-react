@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Cards.css';
+import './Cards.css';
 
 export const Cards = (player) => {
 
