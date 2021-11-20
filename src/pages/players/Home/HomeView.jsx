@@ -1,5 +1,4 @@
-import React, {useState, useEffect} from 'react';
-import axios from 'axios';
+import React from 'react';
 import {PaginationButtons} from '../../../components/players/Pagination/Pagination';
 import {Card} from '../../../components/players/Card/Card';
 import {SearchInput} from '../../../components/players/SearchInput/SearchInput';
@@ -7,40 +6,14 @@ import {Loading} from '../../../components/players/Loading/Loading';
 import {Message} from '../../../components/shared/Message/Message';
 import './Home.css';
 
-
-export const Home = () => {
-    const [cards, setCards] = useState([]);
-    const [currentPage, setCurrentPage] = useState(1);
-    const [totalPages, setTotalPages] = useState();
-    const [searchPlayers, setSearchPlayers] = useState('');
-    const [loading, setLoading] = useState(false);
-
-    useEffect(() => {
-        fetchPlayersData();
-    }, [currentPage, searchPlayers]);
-
-    const fetchPlayersData = async () => {
-        const quantityPages = 20;
-        setLoading(true);
-        await axios.get(
-            `${process.env.REACT_APP_API_URL}players/?search=${searchPlayers}&page=${currentPage}&limit=${quantityPages}`
-        ).then(response => {
-            setTotalPages(calculateTotalPages(response.data.total, quantityPages));
-            setCards(response.data.data);
-            setLoading(false);
-        }).catch(error => {
-            setLoading(false);
-        });
-    };
-
-    const calculateTotalPages = (total, quantity) => {
-        let numberPages = Math.trunc(total / quantity);
-        return numberPages <= 0 ? 1 : numberPages;
-    }
-
-    const handlePageChange = (e) => {
-        setCurrentPage(e.target.innerText);
-    };
+export const HomeView = ({
+                         setSearchPlayers,
+                         loading,
+                         handlePageChange,
+                         totalPages,
+                         currentPage,
+                         cards
+                         }) => {
 
     return (
         <>
@@ -61,7 +34,7 @@ export const Home = () => {
                                     page={currentPage}
                                 />
                             </div>
-                            { cards.length ?
+                            {cards.length ?
                                 <div className='player-container'>
                                     {
                                         cards.map((player) => (

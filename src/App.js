@@ -1,8 +1,8 @@
-import {Home} from './pages/players/Home/Home';
+import {HomeContainer} from './pages/players/Home/HomeContainer';
 function App() {
     return (
         <>
-            <Home/>
+            <HomeContainer/>
         </>
     )
 }
