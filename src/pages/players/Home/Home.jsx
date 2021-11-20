@@ -4,7 +4,7 @@ import {PaginationButtons} from '../../../components/players/Pagination/Paginati
 import {Card} from '../../../components/players/Card/Card';
 import {SearchInput} from '../../../components/players/SearchInput/SearchInput';
 import {Loading} from '../../../components/players/Loading/Loading';
-import {NotContent} from '../../../components/players/NotContent/NotContent';
+import {Message} from '../../../components/shared/Message/Message';
 import './Home.css';
 
 
@@ -21,20 +21,15 @@ export const Home = () => {
 
     const fetchPlayersData = async () => {
         const quantityPages = 20;
-        console.log(`Estoy dentro http://localhost:3000/api/v1/players/?search=${searchPlayers}&page=${currentPage}&limit=${quantityPages}`);
-
         setLoading(true);
         await axios.get(
-            `http://localhost:3000/api/v1/players/?search=${searchPlayers}&page=${currentPage}&limit=${quantityPages}`
+            `${process.env.REACT_APP_API_URL}players/?search=${searchPlayers}&page=${currentPage}&limit=${quantityPages}`
         ).then(response => {
-            console.log(" Respuesta: ");
-            console.log(response.data);
             setTotalPages(calculateTotalPages(response.data.total, quantityPages));
             setCards(response.data.data);
             setLoading(false);
         }).catch(error => {
             setLoading(false);
-            console.log(error);
         });
     };
 
@@ -78,7 +73,7 @@ export const Home = () => {
                                         ))
                                     }
                                 </div> :
-                                <NotContent/>
+                                <Message message='No players were found'/>
                             }
                         </>
                 }
