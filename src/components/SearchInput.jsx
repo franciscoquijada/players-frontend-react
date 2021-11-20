@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
+import {IconButton, InputAdornment, TextField} from "@material-ui/core";
+import SearchIcon from "@material-ui/icons/Search";
 import '../styles/Card.css';
-import {Input} from "@material-ui/core";
 
 export const SearchInput = ({setSearchPlayers}) => {
     const [searchInput, setSearchInput] = useState('');
@@ -10,10 +11,21 @@ export const SearchInput = ({setSearchPlayers}) => {
     }
 
     return (
-        <Input icon='search'
-               placeholder='Search player...'
-               onChange={(e) => searchItems(e.target.value)}
-        />
+            <TextField
+                label='Search player'
+                type='search'
+                variant='outlined'
+                onChange={(e) => searchItems(e.target.value)}
+                InputProps={{
+                    endAdornment: (
+                        <InputAdornment position='start'>
+                            <IconButton>
+                                <SearchIcon />
+                            </IconButton>
+                        </InputAdornment>
+                    )
+                }}
+            />
     );
 };
 
