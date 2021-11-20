@@ -1,10 +1,10 @@
 import React from 'react';
 import '../styles/Cards.css';
 
-export const Cards = React.forwardRef(({player}, ref) => {
+export const Cards = (player) => {
 
     return (
-        <div className='player-card' ref={ref}>
+        <div className='player-card'>
             <section className='top'>
                 <section className='image-name-tagline'>
                     <img src={player.avatar} alt={player.nickname}/>
