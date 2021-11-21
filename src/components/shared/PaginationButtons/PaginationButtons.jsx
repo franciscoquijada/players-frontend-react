@@ -9,9 +9,7 @@ export const PaginationButtons = ({handlePageChange, total, page}) => {
                 color='primary'
                 size='large'
                 page={Number(page)}
-                onChange={(e) => handlePageChange(e)}
-                hidePrevButton
-                hideNextButton
+                onChange={(e, pageNumber) => handlePageChange(pageNumber)}
             />
     );
 }
