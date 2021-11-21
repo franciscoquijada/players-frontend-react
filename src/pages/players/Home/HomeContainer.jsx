@@ -37,6 +37,7 @@ export const HomeContainer = () => {
 
     return <HomeView
         setSearchPlayers={setSearchPlayers}
+        searchPlayers={searchPlayers}
         loading={loading}
         handlePageChange={handlePageChange}
         totalPages={totalPages}

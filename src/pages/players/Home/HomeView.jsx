@@ -12,14 +12,15 @@ export const HomeView = ({
                          handlePageChange,
                          totalPages,
                          currentPage,
-                         players
+                         players,
+                         searchPlayers
                          }) => {
 
     return (
         <>
             <div className='center'>
                 <h1>List of Players</h1>
-                <SearchInput setSearchPlayers={setSearchPlayers} labelText='Search player'/>
+                <SearchInput setSearchPlayers={setSearchPlayers} labelText='Search player' searchPlayers={searchPlayers}/>
             </div>
             <div className='center'>
                 {

@@ -1,5 +1,7 @@
 import React from 'react';
 import Pagination from '@material-ui/lab/Pagination';
+import {IconButton, InputAdornment} from "@material-ui/core";
+import SearchIcon from "@material-ui/icons/Search";
 
 export const PaginationButtons = ({handlePageChange, total, page}) => {
 

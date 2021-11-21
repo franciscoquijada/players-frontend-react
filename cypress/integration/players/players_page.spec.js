@@ -1,9 +1,9 @@
 describe('Players Page', () => {
     beforeEach(() => {
-        cy.visit('http://localhost:8000/');
+        cy.visit(Cypress.env('URL_PAGE'));
     })
 
-    it('Init page can be opened', () => {
+    it('Should be can open init page', () => {
         cy.contains('List of Players');
         cy.get('input').type('1');
         cy.get('.card').should('have.length.greaterThan', 2);
@@ -21,6 +21,23 @@ describe('Players Page', () => {
         cy.contains('No players were found');
         const expectedCount = 0;
         cy.get('.card').should('have.length', expectedCount);
+    });
+
+    it('Should not be able to type characters other than numbers and letters', () => {
+        cy.get('input').type('+*,-_&%$#@');
+        cy.get('input').should('have.value', '');
+    });
+
+    it('Should not be able to type a number after letters', () => {
+        const number = '12';
+        cy.get('input').type(`${number}dfd`);
+        cy.get('input').should('have.value', number);
+    });
+
+    it('Should not be able to type a letters after numbers', () => {
+        const letter = 'abc';
+        cy.get('input').type(`${letter}1234`);
+        cy.get('input').should('have.value', letter);
     });
 
     it('Should be can change page', () => {
