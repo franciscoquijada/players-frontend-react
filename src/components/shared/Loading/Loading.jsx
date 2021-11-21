@@ -1,11 +1,11 @@
 import React from 'react';
 import {LinearProgress} from '@material-ui/core';
 
-export const Loading = () => {
+export const Loading = ({message}) => {
 
     return (
         <>
-            <h2>Searching players</h2>
+            <h2>{message}</h2>
             <LinearProgress size='20%'/>
         </>
     );

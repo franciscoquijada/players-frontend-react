@@ -8,7 +8,6 @@ export const Card = ({player}) => {
             <div className='image-container'>
                 <img src={`https://${player.avatar}`} alt={player.nickname}/>
             </div>
-
             <div className='info-container'>
                 <section className='name-tagline'>
                     <p className='player-name'>{player.nickname}</p>
