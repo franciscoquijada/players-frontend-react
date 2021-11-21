@@ -1,52 +1,52 @@
 .card {
-    display: flex;
-    justify-content: space-evenly;
-    height: 180px;
-    margin: 5px;
-    border: 1px solid #353f3f;
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 3px;
-    transition: transform 0.2s ease;
+  display: flex;
+  justify-content: space-evenly;
+  height: 180px;
+  margin: 5px;
+  border: 1px solid #353f3f;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 3px;
+  transition: transform 0.2s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px) scale(1.005);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.11);
-    transition: transform 0.2s ease-out;
+  transform: translateY(-5px) scale(1.005);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.11);
+  transition: transform 0.2s ease-out;
 }
 
 .card:active {
-    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.11);
+  box-shadow: 0 5px 9px rgba(0, 0, 0, 0.11);
 }
 
 img {
-    height: 100%;
-    width: 100%;
-    zoom: 12%;
+  height: 100%;
+  width: 100%;
+  zoom: 12%;
 }
 
 .image-container {
-    margin: 2% 0 2% auto;
+  margin: 2% 0 2% auto;
 }
 
 .name-tagline {
-    text-align: center;
+  text-align: center;
 }
 
 .player-name {
-    font-weight: bold;
-    font-size: 30px;
-    margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 20px;
 }
 
 .player-info {
-    font-size: 14px;
-    margin-top: 5px;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 .info-container {
-    display: inline-block;
-    width: 200px;
-    height: 100%;
-    margin: auto;
+  display: inline-block;
+  width: 200px;
+  height: 100%;
+  margin: auto;
 }

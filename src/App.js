@@ -1,10 +1,10 @@
-import {HomeContainer} from './pages/players/Home/HomeContainer';
+import { HomeContainer } from './pages/players/Home/HomeContainer';
 function App() {
-    return (
-        <>
-            <HomeContainer/>
-        </>
-    )
+  return (
+    <>
+      <HomeContainer />
+    </>
+  );
 }
 
-export default App
+export default App;
