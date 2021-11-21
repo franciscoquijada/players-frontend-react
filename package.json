@@ -16,6 +16,7 @@
     "start": "set PORT=8000 && react-scripts start --openssl-legacy-provider start",
     "build": "react-scripts build --openssl-legacy-provider start",
     "test": "react-scripts test",
+    "test:cov": "react-scripts test --coverage",
     "eject": "react-scripts eject",
     "lint": "eslint ./ --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
