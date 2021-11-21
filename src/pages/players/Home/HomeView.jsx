@@ -31,6 +31,7 @@ export const HomeView = ({
                                 <PaginationButtons
                                     handlePageChange={handlePageChange}
                                     total={totalPages}
+                                    page={currentPage}
                                 />
                             </div>
                             {players.length ?
