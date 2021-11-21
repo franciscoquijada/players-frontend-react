@@ -31,8 +31,8 @@ export const HomeContainer = () => {
         return numberPages <= 0 ? 1 : numberPages;
     }
 
-    const handlePageChange = (e) => {
-        setCurrentPage(e.target.innerText);
+    const handlePageChange = (pageNumber) => {
+        setCurrentPage(pageNumber);
     };
 
     return <HomeView
