@@ -25,7 +25,7 @@ Note: Each component is inside a folder that contains its associated css, js and
      
     - **Card**: The files that make up the component that builds the cards that shows the information of each player.
   - **shared**: Folder containing the generic components of the application: 
-    - Loading, Message, PaginationButtons and SearchInput. 
+    - **Loading, Message, PaginationButtons and SearchInput**: Components with descriptive names regarding the responsibility they have. 
 - **pages**: Folder that contains the application pages, these are built with the components of the components folder.
   - **players**: Folder that contains the pages of players.
     - **Home**: Contains the files for the Home page. In this component, the [view container pattern](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) is applied where a component is established that will have the logic such as requests to the api or calculations, and another component that will only be in charge of presenting the information.
