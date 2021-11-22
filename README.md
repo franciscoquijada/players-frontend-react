@@ -10,8 +10,10 @@ this a repository relative: [Api Players repository](https://github.com/francisc
 
 Features:
 
-- You can search for players by typing in the search field, the search is carried out at the same time you type.
-  <img src="./images_readme/busquedaplayers.gif" width="620" alt="busquedaplayers" />
+- **Deploy Players:** The first 20 players are displayed and can be navigated using pagination.
+  <img src="./images_readme/pagination.gif" width="620" alt="busquedaplayers" />
+- **Search players:** If the search text is an exact match to a player id, only this match is displayed. Otherwise it shows all matches using the nickname and status attributes.
+  <img src="./images_readme/searchByIdName.gif" width="620" alt="searchbyidname" />
 
 It was built in [react 17](https://es.reactjs.org/) together with the component library [MUI](https://mui.com/).
 
