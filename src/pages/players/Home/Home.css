@@ -1,6 +1,6 @@
 .player-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20.125rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20.125rem), 1fr));
     grid-template-rows: auto;
     margin: 2rem 1rem;
 }
