@@ -5,7 +5,7 @@ import { HomeView } from './HomeView';
 export const HomeContainer = () => {
   const [players, setPlayers] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState();
+  const [totalPages, setTotalPages] = useState(1);
   const [searchPlayers, setSearchPlayers] = useState('');
   const [loading, setLoading] = useState(false);
   const [showError, setShowError] = useState(false);
