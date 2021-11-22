@@ -17,6 +17,20 @@ Features:
 
 It was built in [react 17](https://es.reactjs.org/) together with the component library [MUI](https://mui.com/).
 
+## Description of project structure
+Note: Each component is inside a folder that contains its associated css, js and test file.
+- Inside the **src** folder:
+- **components:** In this folder are the components that are used to build the pages.
+  - **players**: Folder containing the components related to players. 
+     
+    - **Card**: The files that make up the component that builds the cards that shows the information of each player.
+  - **shared**: Folder containing the generic components of the application: 
+    - Loading, Message, PaginationButtons and SearchInput. 
+- **pages**: Folder that contains the application pages, these are built with the components of the components folder.
+  - **players**: Folder that contains the pages of players.
+    - **Home**: Contains the files for the Home page. In this component, the [view container pattern](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) is applied where a component is established that will have the logic such as requests to the api or calculations, and another component that will only be in charge of presenting the information.
+
+
 ## Instructions to execute:
 
 - Clone this repository.
