@@ -8,6 +8,11 @@
 Project to show the list of players from the [Api Players](https://playersapinest.herokuapp.com/api/v1/players),
 this a repository relative: [Api Players repository](https://github.com/franciscoquijada/players-backend-nestjs).
 
+Features:
+
+- You can search for players by typing in the search field, the search is carried out at the same time you type.
+  <img src="./images_readme/busquedaplayers.gif" width="620" alt="busquedaplayers" />
+
 It was built in [react 17](https://es.reactjs.org/) together with the component library [MUI](https://mui.com/).
 
 ## Instructions to execute:
