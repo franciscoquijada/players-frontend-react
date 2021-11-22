@@ -2,7 +2,7 @@
     Players app 
 </h1>
 <p align="center">
-  <a href="https://playersfront.herokuapp.com/" target="blank"><img src="./images_readme/listofPlayers.png" width="620" alt="List of players" /></a>
+  <a href="https://playersfront.herokuapp.com/" target="blank"><img src="./images_readme/principal.png" width="620" alt="List of players" /></a>
 </p>
 
 Project to show the list of players from the [Api Players](https://playersapinest.herokuapp.com/api/v1/players),
