@@ -35,7 +35,7 @@ Note: Each component is inside a folder that contains its associated css, js and
 
 - Clone this repository.
 - Go to the root directory of the project.
-- Create file .env with this content: `https://playersapinest.herokuapp.com/api/v1/`.
+- Create file .env with this content: `REACT_APP_API_URL = https://playersapinest.herokuapp.com/api/v1/`.
 - Install the dependencies with this command: `npm install` or `yarn install`.
 - Execute the project: `npm start`.
 - By defect the aplication run in the port 8000, you can change it in the package.json file in the section 'scripts', you should find the key 'start' and assign the value PORT. 
