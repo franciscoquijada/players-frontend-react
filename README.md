@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+<h1 align="center"> 
+    Players app 
+</h1>
+<p align="center">
+  <a href="https://playersfront.herokuapp.com/" target="blank"><img src="https://i.postimg.cc/X7CsZLrc/listof-Players.png" width="620" alt="Nest Logo" /></a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project to show the list of players from the [Api Players](https://playersapinest.herokuapp.com/api/v1/players),
+this a repository relative: [Api Players repository](https://github.com/franciscoquijada/players-backend-nestjs).
 
-## Available Scripts
+It was built in [react 17](https://es.reactjs.org/) together with the component library [MUI](https://mui.com/).
 
-In the project directory, you can run:
+## Instructions to execute:
 
-### `yarn start`
+- Clone this repository.
+- Go to the root directory of the project.
+- Create file .env with this content: `https://playersapinest.herokuapp.com/api/v1/`.
+- Install the dependencies with this command: `npm install` or `yarn install`.
+- Execute the project: `npm start`.
+- By defect the aplication run in the port 8000, you can change it in the package.json file in the section 'scripts', you should find the key 'start' and assign the value PORT. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## About Tests
+In this application exist unit test in [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/), these are the related commands:
+- Run all unit test: `npm run test`
+- Run coverage: `npm run test:cov`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+## Execute tests:
+- Execute all unit test: `npm run test`. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+There are also end to end tests in [cypress](https://www.cypress.io/),
+you must create a file named cypress.json (for enviroments data) in the root of the project with the following structure:
+Where URL_PAGE is the url of the application.
 
-### `yarn build`
+`{
+    "env": {
+        "URL_PAGE": "http://localhost:8000/"
+    }
+}`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+these are the related commands:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Open cypress: `npm run cypress:open`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+You can see the project deployed in Heroku:
+[https://playersfront.herokuapp.com/](https://playersfront.herokuapp.com/)
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
