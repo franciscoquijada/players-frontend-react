@@ -18,7 +18,7 @@ export const HomeView = ({
   showError
 }) => {
   const pagination = (
-    <div className="center">
+    <div className="pagination-container">
       <PaginationButtons
         handlePageChange={handlePageChange}
         total={totalPages}
