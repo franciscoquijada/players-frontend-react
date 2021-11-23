@@ -6,7 +6,7 @@ export const Loading = ({ message }) => {
   return (
     <>
       <h2>{message}</h2>
-      <CircularProgress color="primary" size="10%" />
+      <CircularProgress color="primary" size="7rem" />
     </>
   );
 };
