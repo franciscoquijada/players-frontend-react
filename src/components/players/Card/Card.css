@@ -1,22 +1,22 @@
 .card {
   display: flex;
   justify-content: space-evenly;
-  height: 180px;
-  margin: 5px;
-  border: 1px solid #353f3f;
+  height: 11.25rem;
+  margin: 0.3125rem;
+  border: 0.0625rem solid #353f3f;
   font-family: Arial, Helvetica, sans-serif;
-  border-radius: 3px;
+  border-radius: 0.1875rem;
   transition: transform 0.2s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px) scale(1.005);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.11);
+  transform: translateY(-0.3125rem) scale(1.005);
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.11);
   transition: transform 0.2s ease-out;
 }
 
 .card:active {
-  box-shadow: 0 5px 9px rgba(0, 0, 0, 0.11);
+  box-shadow: 0 0.3125rem 0.5625rem rgba(0, 0, 0, 0.11);
 }
 
 img {
@@ -35,18 +35,18 @@ img {
 
 .player-name {
   font-weight: bold;
-  font-size: 27px;
-  margin-bottom: 20px;
+  font-size: 1.6875rem;
+  margin-bottom: 1.25rem;
 }
 
 .player-info {
-  font-size: 14px;
-  margin-top: 5px;
+  font-size: 0.875rem;
+  margin-top: 0.3125rem;
 }
 
 .info-container {
   display: inline-block;
-  width: 200px;
+  width: 12.5rem;
   height: 100%;
   margin: auto;
 }
