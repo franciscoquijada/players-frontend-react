@@ -63,6 +63,9 @@ these are the related commands:
 
 - Open cypress: `npm run cypress:open`
 
+## Format code:
+- Execute this command: `npm run format`.
+
 You can see the project deployed in Heroku:
 [https://playersfront.herokuapp.com/](https://playersfront.herokuapp.com/)
 
