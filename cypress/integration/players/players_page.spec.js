@@ -28,16 +28,10 @@ describe('Players Page', () => {
     cy.get('input').should('have.value', '');
   });
 
-  it('Should not be able to type a number after letters', () => {
-    const number = '12';
-    cy.get('input').type(`${number}dfd`);
-    cy.get('input').should('have.value', number);
-  });
-
-  it('Should not be able to type a letters after numbers', () => {
-    const letter = 'abc';
-    cy.get('input').type(`${letter}1234`);
-    cy.get('input').should('have.value', letter);
+  it('Should be can search by values with letters, numbers and spaces', () => {
+    const search = 'hqhoy qacirk';
+    cy.get('input').type(search);
+    cy.get('input').should('have.value', search);
   });
 
   it('Should be can change page', () => {
