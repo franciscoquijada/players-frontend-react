@@ -14,9 +14,13 @@ export const HomeContainer = () => {
     const fetchPlayersData = () => {
       const quantityPages = 20;
       setLoading(true);
+      let searchString = searchPlayers;
+      if (searchString) {
+        searchString = `&search=${searchPlayers}`;
+      }
       axios
         .get(
-          `${process.env.REACT_APP_API_URL}players/?search=${searchPlayers}&page=${currentPage}&limit=${quantityPages}`
+          `${process.env.REACT_APP_API_URL}players/?page=${currentPage}&limit=${quantityPages}${searchString}`
         )
         .then((response) => {
           setTotalPages(calculateTotalPages(response.data.total, quantityPages));

@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 export const SearchInput = ({ setSearchPlayers, labelText, searchPlayers }) => {
   const searchItems = (searchValue) => {
-    const regValidateOnlyLettersNumbers = /^(?:[A-Za-z\u00f1\u00d1]+|\d+)$/;
+    const regValidateOnlyLettersNumbers = /^[a-z0-9\u00f1\u00d1]+$/i;
     const isValid = regValidateOnlyLettersNumbers.test(searchValue);
     if (isValid || searchValue === '') {
       setSearchPlayers(searchValue);
