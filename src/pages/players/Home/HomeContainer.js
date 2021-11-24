@@ -15,7 +15,7 @@ export const HomeContainer = () => {
       const quantityPages = 20;
       setLoading(true);
       let searchString = searchPlayers;
-      if (searchString) {
+      if (searchPlayers.trim()) {
         searchString = `&search=${searchPlayers}`;
       }
       axios
