@@ -36,17 +36,17 @@ img {
 .player-name {
   font-weight: bold;
   font-size: 1.6875rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.7rem;
 }
 
 .player-info {
-  font-size: 0.875rem;
-  margin-top: 0.3125rem;
+  font-size: 0.775rem;
+  margin-top: 0.1rem;
 }
 
 .info-container {
   display: inline-block;
-  width: 12.5rem;
+  width: 10.5rem;
   height: 100%;
   margin: auto;
 }
