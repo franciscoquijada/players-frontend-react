@@ -70,6 +70,7 @@ these are the related commands:
 You can see the project deployed in Heroku:
 [https://playersfront.herokuapp.com/](https://playersfront.herokuapp.com/)
 
+
 ## Docker:
 You can download the associated docker image in the Packages section in the right menu of github
 of this project.
