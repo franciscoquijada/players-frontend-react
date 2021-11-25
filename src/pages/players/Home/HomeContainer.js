@@ -20,7 +20,7 @@ export const HomeContainer = () => {
       }
       axios
         .get(
-          `${process.env.REACT_APP_API_URL}players/?page=${currentPage}&limit=${quantityPages}${searchString}`
+          `${process.env.REACT_APP_API_URL}players?page=${currentPage}&limit=${quantityPages}${searchString}`
         )
         .then((response) => {
           setTotalPages(calculateTotalPages(response.data.total, quantityPages));
