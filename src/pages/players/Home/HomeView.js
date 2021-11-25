@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { PaginationButtons } from '../../../components/shared/PaginationButtons/PaginationButtons';
+import { PaginationButtons } from '../../../components/commons/PaginationButtons/PaginationButtons';
 import { Card } from '../../../components/players/Card/Card';
-import { SearchInput } from '../../../components/shared/SearchInput/SearchInput';
-import { Loading } from '../../../components/shared/Loading/Loading';
-import { Message } from '../../../components/shared/Message/Message';
+import { SearchInput } from '../../../components/commons/SearchInput/SearchInput';
+import { Loading } from '../../../components/commons/Loading/Loading';
+import { Message } from '../../../components/commons/Message/Message';
 import './Home.css';
 
 export const HomeView = ({
