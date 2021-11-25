@@ -13,6 +13,7 @@ export const HomeView = ({
   handlePageChange,
   totalPages,
   currentPage,
+  setCurrentPage,
   players,
   searchPlayers,
   showError
@@ -53,6 +54,7 @@ export const HomeView = ({
           setSearchPlayers={setSearchPlayers}
           labelText="Search player"
           searchPlayers={searchPlayers}
+          setCurrentPage={setCurrentPage}
         />
       </div>
       {showError ? <Message message="A system error has occurred" /> : playersSection}
@@ -66,6 +68,7 @@ HomeView.propTypes = {
   handlePageChange: PropTypes.func.isRequired,
   totalPages: PropTypes.number.isRequired,
   currentPage: PropTypes.number.isRequired,
+  setCurrentPage: PropTypes.func.isRequired,
   players: PropTypes.array.isRequired,
   searchPlayers: PropTypes.string.isRequired,
   showError: PropTypes.bool.isRequired

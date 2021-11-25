@@ -52,6 +52,7 @@ export const HomeContainer = () => {
       handlePageChange={handlePageChange}
       totalPages={totalPages}
       currentPage={currentPage}
+      setCurrentPage={setCurrentPage}
       players={players}
       showError={showError}
     />

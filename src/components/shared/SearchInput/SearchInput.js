@@ -4,12 +4,14 @@ import SearchIcon from '@material-ui/icons/Search';
 import '../../players/Card/Card.css';
 import PropTypes from 'prop-types';
 
-export const SearchInput = ({ setSearchPlayers, labelText, searchPlayers }) => {
+export const SearchInput = ({ setSearchPlayers, labelText, searchPlayers, setCurrentPage }) => {
   const searchItems = (searchValue) => {
     const regValidateOnlyLettersNumbers = /^[a-z0-9\u00f1\u00d1 _]+$/i;
     const isValid = regValidateOnlyLettersNumbers.test(searchValue);
     if (isValid || searchValue === '') {
+      const initialPage = 1;
       setSearchPlayers(searchValue);
+      setCurrentPage(initialPage);
     }
   };
 
@@ -39,5 +41,6 @@ export const SearchInput = ({ setSearchPlayers, labelText, searchPlayers }) => {
 SearchInput.propTypes = {
   setSearchPlayers: PropTypes.func.isRequired,
   labelText: PropTypes.string.isRequired,
-  searchPlayers: PropTypes.string.isRequired
+  searchPlayers: PropTypes.string.isRequired,
+  setCurrentPage: PropTypes.func.isRequired
 };
