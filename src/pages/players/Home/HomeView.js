@@ -35,16 +35,7 @@ export const HomeView = ({
     </div>
   );
   const playersSection = (
-    <div className="center">
-      {loading ? (
-        <Loading message="Searching Players" />
-      ) : (
-        <>
-          {pagination}
-          {players.length ? playersContainer : <Message message="No players were found" />}
-        </>
-      )}
-    </div>
+    <div className="center">{loading ? <Loading message="Searching Players" /> : null}</div>
   );
   return (
     <>
@@ -58,6 +49,10 @@ export const HomeView = ({
         />
       </div>
       {showError ? <Message message="A system error has occurred" /> : playersSection}
+      <div className="center">
+        {players.length ? playersContainer : <Message message="No players were found" />}
+        {pagination}
+      </div>
     </>
   );
 };
