@@ -2,10 +2,10 @@
     Players app 
 </h1>
 <p align="center">
-  <a href="https://franciscoquijada.github.io/players-frontend-react/" target="blank"><img src="./images_readme/principal.png" width="620" alt="List of players" /></a>
+  <a href="https://playersfront.herokuapp.com/" target="blank"><img src="./images_readme/principal.png" width="620" alt="List of players" /></a>
 </p>
 
-**Link Players app**: [https://franciscoquijada.github.io/players-frontend-react/]()
+**Link Players app**: https://playersfront.herokuapp.com/
 
 Project to show the list of players from the [Api Players](https://playersapinest.herokuapp.com/api/v1/players),
 this a repository relative: [Api Players repository](https://github.com/franciscoquijada/players-backend-nestjs).
